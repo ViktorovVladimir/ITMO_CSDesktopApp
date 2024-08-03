@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03_CreatingAndUsingToolSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex04_UsingStatusStripControl", "Ex04_UsingStatusStripControl\Ex04_UsingStatusStripControl.csproj", "{A8A2E4B5-1123-43C5-BFC6-A68AB4BC0F7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex05_WorkingWithContainerControls", "Ex05_WorkingWithContainerControls\Ex05_WorkingWithContainerControls.csproj", "{92134840-F822-4843-A5EA-C0D6D1648849}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A8A2E4B5-1123-43C5-BFC6-A68AB4BC0F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8A2E4B5-1123-43C5-BFC6-A68AB4BC0F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8A2E4B5-1123-43C5-BFC6-A68AB4BC0F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92134840-F822-4843-A5EA-C0D6D1648849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92134840-F822-4843-A5EA-C0D6D1648849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92134840-F822-4843-A5EA-C0D6D1648849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92134840-F822-4843-A5EA-C0D6D1648849}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
