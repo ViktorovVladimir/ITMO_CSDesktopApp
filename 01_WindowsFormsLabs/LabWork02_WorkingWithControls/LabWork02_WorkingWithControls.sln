@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex01_HandlingClickAndMouseM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex02_WorkingWithLists", "Ex02_WorkingWithLists\Ex02_WorkingWithLists.csproj", "{27FBF89A-7C83-4DFF-B8B7-8F932CADF460}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex03_CreatingAndUsingToolStripControl", "Ex03_CreatingAndUsingToolStripControl\Ex03_CreatingAndUsingToolStripControl.csproj", "{972A85D7-7B7B-4246-A3EB-30B41B397B71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{27FBF89A-7C83-4DFF-B8B7-8F932CADF460}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27FBF89A-7C83-4DFF-B8B7-8F932CADF460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27FBF89A-7C83-4DFF-B8B7-8F932CADF460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972A85D7-7B7B-4246-A3EB-30B41B397B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972A85D7-7B7B-4246-A3EB-30B41B397B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972A85D7-7B7B-4246-A3EB-30B41B397B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972A85D7-7B7B-4246-A3EB-30B41B397B71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
