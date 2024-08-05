@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itmo.CSDesktopApp.WinFormSa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itmo.CSDesktopApp.WinFormSample02", "Itmo.CSDesktopApp.WinFormSample02\Itmo.CSDesktopApp.WinFormSample02.csproj", "{105BC8E0-4856-4A64-B64C-009BB0747E41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itmo.CSCourseApp.WpfApp", "Itmo.CSCourseApp.WpfApp\Itmo.CSCourseApp.WpfApp.csproj", "{5DE46881-52F3-4C0B-99E5-235B64C2257C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{105BC8E0-4856-4A64-B64C-009BB0747E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{105BC8E0-4856-4A64-B64C-009BB0747E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{105BC8E0-4856-4A64-B64C-009BB0747E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE46881-52F3-4C0B-99E5-235B64C2257C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE46881-52F3-4C0B-99E5-235B64C2257C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE46881-52F3-4C0B-99E5-235B64C2257C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE46881-52F3-4C0B-99E5-235B64C2257C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
