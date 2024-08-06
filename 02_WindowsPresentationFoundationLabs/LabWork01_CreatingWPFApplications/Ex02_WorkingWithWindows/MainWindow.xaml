@@ -1,0 +1,14 @@
+﻿<Window x:Class="Ex02_WorkingWithWindows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex02_WorkingWithWindows"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="MainWindow1">
+        <Button x:Name="New_Win" Content="New Windows" HorizontalAlignment="Left" Margin="125,118,0,0" VerticalAlignment="Top" Height="41" Width="176" Click="New_Win_Click"/>
+        <TextBlock x:Name="txtBlock" HorizontalAlignment="Left" Margin="400,118,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="50" Width="75" UseLayoutRounding="False"/>
+
+    </Grid>
+</Window>
