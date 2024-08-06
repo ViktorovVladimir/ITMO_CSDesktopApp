@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button HorizontalAlignment="Left" Margin="64,206,0,0" VerticalAlignment="Top" Height="101" Width="345">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="141*"/>
+        </Grid.RowDefinitions>
+        <Button HorizontalAlignment="Left" Margin="64,54,0,0" VerticalAlignment="Top" Height="101" Width="345" Grid.Row="1">
             <ComboBox Width="171" >
                 <CheckBox/>
                 <CheckBox/>
@@ -20,8 +24,17 @@
 
         <ComboBox HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" Width="178" Height="20"/>
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="592,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.649,2.365"/>
-        <Calendar HorizontalAlignment="Left" Margin="554,194,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="74,75,0,0" VerticalAlignment="Top" Height="39" Width="108" Click="Button_Click"/>
+        <Calendar HorizontalAlignment="Left" Margin="554,42,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="96,93,0,0" VerticalAlignment="Top" Height="39" Width="108" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-22.674"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>
