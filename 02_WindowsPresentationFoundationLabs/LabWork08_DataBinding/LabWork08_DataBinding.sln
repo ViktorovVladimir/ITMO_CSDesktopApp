@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex01_CreatingDataBindingToCollectionObject", "Ex01_CreatingDataBindingToCollectionObject.csproj", "{72BF4264-7B91-4992-89F5-E14B00CCDC10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72BF4264-7B91-4992-89F5-E14B00CCDC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BF4264-7B91-4992-89F5-E14B00CCDC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BF4264-7B91-4992-89F5-E14B00CCDC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BF4264-7B91-4992-89F5-E14B00CCDC10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA1A7999-5A35-4971-8BBC-2C06E27D3767}
+	EndGlobalSection
+EndGlobal

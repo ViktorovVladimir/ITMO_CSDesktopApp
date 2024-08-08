@@ -1,0 +1,38 @@
+﻿<Window x:Class="Ex01_CreatingDataBindingToCollectionObject.MyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex01_CreatingDataBindingToCollectionObject"
+        mc:Ignorable="d"
+        Title="MyWindow" Height="450" Width="800" Closed="Window_Closed" Closing="Window_Closing">
+
+    <Window.Resources>
+
+        <local:StudentList x:Key="studentCollection"/>
+
+        <local:BoolToBrushConverter x:Key="boolToBrushConverter" />
+
+        <DataTemplate x:Key="listBoxTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Fill="{Binding Path=IsEnrolled, Converter={StaticResource boolToBrushConverter}}"
+                        Height="10" 
+                        Width="10"
+                        Margin="0,0,5,0"/>
+                <TextBlock Text="{Binding Path=StudentName}"/>
+            </StackPanel>
+        </DataTemplate>
+
+    </Window.Resources>
+
+
+    <Grid>
+        <ListBox Height="60" HorizontalAlignment="Left" 
+                 Margin="12,12,0,0" Name="ListBox2"  
+                 VerticalAlignment = "Top" Width="250" 
+                 ItemsSource="{Binding Source={StaticResource studentCollection}}"
+                 ItemTemplate="{StaticResource listBoxTemplate}"
+            />
+
+    </Grid>
+</Window>
