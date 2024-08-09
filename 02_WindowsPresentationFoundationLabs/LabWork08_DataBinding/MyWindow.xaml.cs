@@ -20,7 +20,7 @@ namespace Ex01_CreatingDataBindingToCollectionObject
     public partial class MyWindow : Window
     {
         //--.
-        private bool _close;
+        //private bool _close;
         //--.
         MainWindow wnd1 = null;
 
@@ -40,9 +40,29 @@ namespace Ex01_CreatingDataBindingToCollectionObject
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //--.
-            if (_close) return;
+            //if (_close) 
+            //    return;
             e.Cancel = true;
             Hide();
+        }
+
+        private void ListBox2_Selected(object sender, RoutedEventArgs e)
+        {
+
+
+            //wnd1.selectItem(2);
+        }
+
+        private void ListBox2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //--.
+            //string curItem = ListBox2.SelectedItem.ToString();
+            //--.
+            int index = ListBox2.SelectedIndex;
+
+            MainWindow w = (MainWindow)this.Owner;
+            w.selectLBItem(index);
+
         }
     }
 }

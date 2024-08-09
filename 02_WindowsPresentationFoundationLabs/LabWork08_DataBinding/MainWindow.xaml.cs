@@ -49,5 +49,16 @@ namespace Ex01_CreatingDataBindingToCollectionObject
             //--.
             myWin.Show();
         }
+
+        //--.
+        public void selectLBItem(int index)
+        {
+            if( index >= 0 && index < ListBox1.Items.Count )
+            {
+                ListBox1.SelectedIndex = index;
+                ListBox1.ScrollIntoView(ListBox1.SelectedItem);
+            }   
+        }
+
     }
 }

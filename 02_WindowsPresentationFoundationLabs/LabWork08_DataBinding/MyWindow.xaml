@@ -31,7 +31,7 @@
                  Margin="12,12,0,0" Name="ListBox2"  
                  VerticalAlignment = "Top" Width="250" 
                  ItemsSource="{Binding Source={StaticResource studentCollection}}"
-                 ItemTemplate="{StaticResource listBoxTemplate}"
+                 ItemTemplate="{StaticResource listBoxTemplate}" SelectionChanged="ListBox2_SelectionChanged"
             />
 
     </Grid>
