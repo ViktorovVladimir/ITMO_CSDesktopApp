@@ -60,5 +60,12 @@ namespace Ex01_CreatingDataBindingToCollectionObject
             }   
         }
 
+        //--.
+        public void updateTextBlock(string studentInfo, string comment)
+        {
+            studentInfoTextBlock.Text = studentInfo;
+            commentTextBlock.Text = comment;
+        }
+
     }
 }

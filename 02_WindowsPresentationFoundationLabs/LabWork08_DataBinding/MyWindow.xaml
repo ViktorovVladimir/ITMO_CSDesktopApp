@@ -34,5 +34,8 @@
                  ItemTemplate="{StaticResource listBoxTemplate}" SelectionChanged="ListBox2_SelectionChanged"
             />
 
+        <TextBox x:Name="commentText" Text="" Margin="10,220,10,10" Height="30" />
+        <Button Content="Send Info" Margin="10,270,10,10" Height="30" Click="Button_Click" />
+
     </Grid>
 </Window>

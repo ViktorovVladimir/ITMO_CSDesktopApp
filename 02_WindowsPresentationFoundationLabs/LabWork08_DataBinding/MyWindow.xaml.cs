@@ -64,5 +64,15 @@ namespace Ex01_CreatingDataBindingToCollectionObject
             w.selectLBItem(index);
 
         }
+
+        //--.
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {   
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if( mainWindow != null && ListBox2.SelectedItem is Student st) 
+            {
+                mainWindow.updateTextBlock(st.StudentName, commentText.Text.ToString());
+            }
+        }   
     }
 }

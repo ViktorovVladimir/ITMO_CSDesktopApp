@@ -10,15 +10,17 @@
     <Window.Resources>
         <local:StudentList x:Key="studentCollection"/>
     </Window.Resources>
-    
+
     <Grid>
         <ListBox Height="60" HorizontalAlignment="Left" 
                  Margin="12,12,0,0" Name="ListBox1"  
                  VerticalAlignment = "Top" Width="250" 
                  ItemsSource="{Binding Source={StaticResource studentCollection}}"
                  DisplayMemberPath="FullStudentData"/>
-        <Button x:Name="ButNewWin" Content="Button" HorizontalAlignment="Left" Margin="77,294,0,0" VerticalAlignment="Top" Height="48" Width="157" Click="Button_Click"/>
+        <Button x:Name="ButNewWin" Content="Open Second Window &gt;&gt;" HorizontalAlignment="Left" Margin="565,24,0,0" VerticalAlignment="Top" Height="48" Width="157" Click="Button_Click"/>
 
+        <TextBlock x:Name="studentInfoTextBlock" Text="" Height="20" Margin="10" FontSize="16"/>
+        <TextBlock x:Name="commentTextBlock" Text="" Height="20" Margin="10,40,10,10" FontSize="14"/>
 
     </Grid>
 </Window>
