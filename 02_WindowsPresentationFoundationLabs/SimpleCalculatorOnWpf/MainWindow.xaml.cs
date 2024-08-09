@@ -32,6 +32,7 @@ namespace SimpleCalculatorOnWpf
         private const string eightOut = "8";
         private const string nineOut = "9";
         private const string zeroOut = "0";
+        private bool bModeCalcStandart = true; 
 
 
         public MainWindow()
@@ -117,9 +118,43 @@ namespace SimpleCalculatorOnWpf
                     CalcEngine.CalcReset();
                     break;
 
-
             }
             //--.
+            e.Handled = true;
+        }
+
+        //--.
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            //--.
+            FrameworkElement feSource = e.Source as FrameworkElement;
+
+            //--.
+            switch (feSource.Name)
+            {
+                case "MenuItemAbout":
+                    MessageBox.Show("Simple Calculator App\nVersion 2.0.1.1\n(c) 2024 Itmo", "About Calculator");
+                    break;
+                case "MenuItemModeChange":
+                    {
+                        bModeCalcStandart ^= true;
+                        if (!bModeCalcStandart)
+                        {
+                            //--.
+                            MenuItemModeChange.Header = "Standart";
+                            //--.
+                            //toExtendedMode();
+                        }
+                        if (bModeCalcStandart)
+                        {
+                            //--.
+                            MenuItemModeChange.Header = "Extended";
+                            //--.
+                            //toStandartMode();
+                        }
+                    }
+                    break;
+            }
             e.Handled = true;
         }
     }

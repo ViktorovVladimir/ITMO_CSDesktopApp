@@ -132,25 +132,15 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-
     </Window.Resources>
 
     <DockPanel>
         <Menu DockPanel.Dock="Top" MinHeight="19" Background="#F5F5F5" BorderThickness="0">
             <MenuItem Header="View" Foreground="Black">
-                <MenuItem Header="Save" Command = "Save" Margin="0" Foreground="Black" MaxHeight="19">
-                    <MenuItem.CommandBindings>
-                        <CommandBinding Command="Save" />
-                    </MenuItem.CommandBindings>
-                </MenuItem>
+                <MenuItem x:Name="MenuItemModeChange" Click="MenuItem_Click"  Header="Extended" Margin="0" Foreground="Black" MaxHeight="19"/>
             </MenuItem>
             <MenuItem Header="Help" Foreground="Black">
-                <MenuItem Header="Save" Command = "Save" Margin="0" Foreground="Black" MaxHeight="19">
-                    <MenuItem.CommandBindings>
-                        <CommandBinding Command="Save" />
-                    </MenuItem.CommandBindings>
-                </MenuItem>
+                <MenuItem x:Name="MenuItemAbout" Click="MenuItem_Click" Header="About" Margin="0" Foreground="Black" MaxHeight="19"/>
             </MenuItem>
         </Menu>
 
