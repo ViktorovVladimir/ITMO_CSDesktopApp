@@ -45,7 +45,10 @@ namespace SimpleCalculatorOnWpf
 
             //--.
             FrameworkElement feSource = e.Source as FrameworkElement;
-            
+
+            //--.
+            outTxt.Text = "";
+
             //--.
             switch ( feSource.Name )
             {
@@ -102,7 +105,8 @@ namespace SimpleCalculatorOnWpf
                     this.Close();
                     break;
                 case "KeyDate":
-                    OutputDisplay.Text = CalcEngine.GetDate();
+                    OutputDisplay.Text = "";
+                    outTxt.Text = CalcEngine.GetDate();
                     CalcEngine.CalcReset();
                     break;
                 case "KeyPoint":

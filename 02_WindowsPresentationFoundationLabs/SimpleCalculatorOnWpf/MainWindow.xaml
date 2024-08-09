@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleCalculatorOnWpf"
         mc:Ignorable="d"
-        Title="Sipmle Calculator" Height="700" Width="375" WindowStartupLocation="CenterScreen"
-                        ResizeMode="NoResize" WindowStyle="None">
+        Title="Sipmle Calculator" Background="DarkSeaGreen" Height="520" Width="400" WindowStartupLocation="CenterScreen"
+                        ResizeMode="NoResize" Icon="/calculations.ico">
     <Window.Resources>
         <LinearGradientBrush x:Key="Brush3">
             <GradientStop Color="#FFC4D0" Offset="0"/>
@@ -136,47 +136,87 @@
 
     </Window.Resources>
 
-    <Grid Background="DarkSeaGreen" ButtonBase.Click="Grid_Click">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-        </Grid.RowDefinitions>
-        <Button x:Name="KeyPoint" Content="," Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="6"/>
-        <Button x:Name="KeyZero" Content="0" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="6"/>
-        <Button x:Name="KeySign" Content="+/-" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="6"/>
-        <Button x:Name="KeyPlus" Content="+" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="6"/>
-        <Button x:Name="KeyOne" Content="1" Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="5"/>
-        <Button x:Name="KeyTwo" Content="2" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="5"/>
-        <Button x:Name="KeyThree" Content="3" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="5"/>
-        <Button x:Name="KeyMinus" Content="-" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="5"/>
-        <Button x:Name="KeyFour" Content="4" Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="4"/>
-        <Button x:Name="KeyFive" Content="5" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="4"/>
-        <Button x:Name="KeySix" Content="6" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="4"/>
-        <Button x:Name="KeyMultiply" Content="*" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="4"/>
-        <Button x:Name="KeySeven" Content="7" Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="3"/>
-        <Button x:Name="KeyEight" Content="8" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="3"/>
-        <Button x:Name="KeyNine" Content="9" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="3"/>
-        <Button x:Name="KeyDivide" Content="/" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="3"/>
-        <Button x:Name="KeyEqual" Content="=" Style="{StaticResource ResultButton}" Grid.Column="4" Grid.Row="6"/>
-        <Button x:Name="KeyClear" Content="С" Style="{StaticResource ResultButton}" Grid.Column="6" Grid.Row="3"/>
-        <Button x:Name="KeyExit" Content="Exit" Style="{StaticResource OtherButton}" Grid.Column="6" Grid.Row="5"/>
-        <Button x:Name="KeyDate" Content="Date" Style="{StaticResource OtherButton}" Grid.Column="6" Grid.Row="4"/>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" MinHeight="19" Background="#F5F5F5" BorderThickness="0">
+            <MenuItem Header="View" Foreground="Black">
+                <MenuItem Header="Save" Command = "Save" Margin="0" Foreground="Black" MaxHeight="19">
+                    <MenuItem.CommandBindings>
+                        <CommandBinding Command="Save" />
+                    </MenuItem.CommandBindings>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help" Foreground="Black">
+                <MenuItem Header="Save" Command = "Save" Margin="0" Foreground="Black" MaxHeight="19">
+                    <MenuItem.CommandBindings>
+                        <CommandBinding Command="Save" />
+                    </MenuItem.CommandBindings>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
 
-        <Rectangle Margin="12 0 12 0" Height="3" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" Fill="#323232"/>
-        <TextBox x:Name="OutputDisplay" Background="#FFFFC0" Margin="14 0 14 0" Grid.Row="1" Grid.ColumnSpan="5" FontSize="30" TextAlignment="Right" VerticalContentAlignment="Center" Foreground="Black" TextWrapping="Wrap"/>
+        <Grid Margin="5, 5, 5, 15" Background="DarkSeaGreen" ButtonBase.Click="Grid_Click">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="Gray" Grid.Row="0" Grid.RowSpan="2" BorderThickness="5" CornerRadius="25" Background="#FFFFC0"/>
+                
+                <TextBlock x:Name="OutputDisplay" FontSize="60" Foreground="Black" Margin="20 0 20 20" Grid.Row="1" Text="" TextAlignment="Right">
+                    <TextBlock.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Copy" Command="Copy">
+                                <MenuItem.CommandBindings>
+                                    <CommandBinding Command="Copy" />
+                                </MenuItem.CommandBindings>
+                            </MenuItem>
+                        </ContextMenu>
+                    </TextBlock.ContextMenu>
+                </TextBlock>
+                <TextBlock x:Name="outTxt" FontSize="20" Foreground="#A5A5A5" Margin="27 20 27 0" Grid.Row="0" Text="" TextAlignment="Right"/>
+            </Grid>
+
+            <Button x:Name="KeyPoint" Content="," Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="4"/>
+            <Button x:Name="KeyZero" Content="0" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="4"/>
+            <Button x:Name="KeySign" Content="+/-" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="4"/>
+            <Button x:Name="KeyPlus" Content="+" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="4"/>
+            <Button x:Name="KeyOne" Content="1" Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="3"/>
+            <Button x:Name="KeyTwo" Content="2" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="3"/>
+            <Button x:Name="KeyThree" Content="3" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="3"/>
+            <Button x:Name="KeyMinus" Content="-" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="3"/>
+            <Button x:Name="KeyFour" Content="4" Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="2"/>
+            <Button x:Name="KeyFive" Content="5" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="KeySix" Content="6" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="2"/>
+            <Button x:Name="KeyMultiply" Content="*" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="2"/>
+            <Button x:Name="KeySeven" Content="7" Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="1"/>
+            <Button x:Name="KeyEight" Content="8" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="KeyNine" Content="9" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="1"/>
+        
+            <Button x:Name="KeyDivide" Content="/" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="1"/>
+            <Button x:Name="KeyEqual" Content="=" Style="{StaticResource ResultButton}" Grid.Column="4" Grid.Row="4"/>
+            <Button x:Name="KeyClear" Content="С" Style="{StaticResource ResultButton}" Grid.Column="6" Grid.Row="1"/>
+            <Button x:Name="KeyExit" Content="Exit" Style="{StaticResource OtherButton}" Grid.Column="6" Grid.Row="3"/>
+            <Button x:Name="KeyDate" Content="Date" Style="{StaticResource OtherButton}" Grid.Column="6" Grid.Row="2"/>
+
         
 
     </Grid>
+
+    </DockPanel>
 </Window>
