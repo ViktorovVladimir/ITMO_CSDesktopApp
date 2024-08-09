@@ -105,6 +105,9 @@ namespace SimpleCalculatorOnWpf
                     OutputDisplay.Text = CalcEngine.GetDate();
                     CalcEngine.CalcReset();
                     break;
+                case "KeyPoint":
+                    OutputDisplay.Text = CalcEngine.CalcDecimal();
+                    break;
                 case "KeyEqual":
                     OutputDisplay.Text = CalcEngine.CalcEqual();
                     CalcEngine.CalcReset();

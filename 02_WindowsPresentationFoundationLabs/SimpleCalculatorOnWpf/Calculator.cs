@@ -133,9 +133,9 @@ namespace Calculator
 			if (!decimalAdded && !secondNumberAdded)
 			{
 				if (stringAnswer != "")
-					stringAnswer = stringAnswer + ".";
+					stringAnswer = stringAnswer + ",";
 				else
-					stringAnswer = "0.";
+					stringAnswer = "0,";
 
 				decimalAdded = true;
 			}

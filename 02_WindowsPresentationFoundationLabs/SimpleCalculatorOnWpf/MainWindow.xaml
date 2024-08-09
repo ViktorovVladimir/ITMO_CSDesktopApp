@@ -153,7 +153,7 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <Button Content="," Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="6"/>
+        <Button x:Name="KeyPoint" Content="," Style="{StaticResource AllButtoms}" Grid.Column="0" Grid.Row="6"/>
         <Button x:Name="KeyZero" Content="0" Style="{StaticResource AllButtoms}" Grid.Column="1" Grid.Row="6"/>
         <Button x:Name="KeySign" Content="+/-" Style="{StaticResource AllButtoms}" Grid.Column="2" Grid.Row="6"/>
         <Button x:Name="KeyPlus" Content="+" Style="{StaticResource ComputeButton}" Grid.Column="3" Grid.Row="6"/>
